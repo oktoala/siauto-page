@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
-
 interface Accordion {
   header: string;
   content: string;
@@ -83,7 +82,7 @@ export default () => {
         <div className="flex flex-col mt-12 mx-auto">
           {accordionItem.map((item, i) => {
             return (
-              <AccordionItem i={i} item={item} selected={selected} toggle={toggle} />
+              <AccordionItem key={item.header} i={i} item={item} selected={selected} toggle={toggle} />
             );
           })}
           <button type="button" className="hidden mt-12 self-center btn btn-purple hover:bg-bookmark-white hover:text-black">
