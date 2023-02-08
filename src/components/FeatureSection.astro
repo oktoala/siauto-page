@@ -1,0 +1,24 @@
+---
+import HeroImage from "./HeroImage.astro";
+
+const { className, dir, icon, nameFeature, shape, text } = Astro.props;
+---
+
+<div class={`relative mt-20 ${className}`}>
+  <div
+    class={`container flex flex-col ${
+      dir === "left" ? "lg:flex-row" : "lg:flex-row-reverse"
+    } items-center justify-center gap-x-24`}
+  >
+    <HeroImage src={icon} />
+    <div class="flex flex-1 flex-col items-center lg:items-start">
+      <h1 class="text-3xl text-bookmark-blue">{nameFeature}</h1>
+      <p
+        class="text-bookmark-grey my-4 text-center lg:text-left sm:w-3/4 lg:w-full"
+      >
+        {text}
+      </p>
+    </div>
+  </div>
+  <slot />
+</div>

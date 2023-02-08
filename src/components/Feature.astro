@@ -1,0 +1,34 @@
+---
+import FeatureSection from "./FeatureSection.astro";
+import RoundedShapeLeft from "./RoundedShapeLeft.astro";
+import RoundedShapeRight from "./RoundedShapeRight.astro";
+import ImgFitur1 from "../icons/fitur1.png";
+import ImgFitur2 from "../icons/fitur2.png";
+---
+
+<section id="features" class="bg-bookmark-white py-20 mt-20 lg:mt-60">
+  <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+    <h2 class="text-3xl text-center text-bookmark-blue">Features</h2>
+    <p class="text-center text-bookmark-grey">
+      Aplikasi ini menyediakan beberapa fitur yang akan membantu hidup anda
+    </p>
+  </div>
+  <FeatureSection
+    icon={ImgFitur1}
+    dir="left"
+    nameFeature="Simple To Use"
+    text="Cukup isi NIM dan Password dan kuesioner KHS kalian auto terisi."
+    class="lg:mt-24"
+  >
+    <RoundedShapeLeft />
+  </FeatureSection>
+  <FeatureSection
+    icon={ImgFitur2}
+    dir="right"
+    nameFeature="Packed With Features"
+    text="Dilengkapi preferensi untuk kalian yang gak terlalu mageran."
+    class="lg:mt-56"
+  >
+    <RoundedShapeRight />
+  </FeatureSection>
+</section>

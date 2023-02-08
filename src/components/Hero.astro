@@ -1,0 +1,56 @@
+---
+import Button from "./Button.astro";
+import HeroImage from "./HeroImage.astro";
+import ImageLaptop from "../icons/hero.png";
+import RoundedShape from "./RoundedShape.astro";
+---
+
+<section id="download" class="relative">
+  <div
+    class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28"
+  >
+    <div class="flex flex-1 flex-col items-center lg:items-start">
+      <h1
+        class="text-bookmark-blue text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6"
+      >
+        Untuk Kalian Yang Malas Isi Kuesioner
+      </h1>
+      <p class="text-bookmark-grey text-lg text-center lg:text-left mb-6">
+        Isi kuesioner KHS sia.unmul.ac.id kalian secara otomatis
+      </p>
+      <div class="w-full grid gap-2 grid-cols-2 items-center justify-center">
+        <a
+          title="Download Untuk Windows"
+          href="https://github.com/oktoala/siauto-desktop/releases/download/v0.3.0/SIAutoDesktop.0.3.0.exe"
+        >
+          <Button>
+            Download Untuk <i class="px-1 fab fa-windows"></i>
+          </Button>
+        </a>
+        <a
+          title="Download Untuk Linux"
+          href="https://github.com/oktoala/siauto-desktop/releases/download/v0.3.0/SIAutoDesktop-0.3.0.AppImage"
+        >
+          <Button>Download Untuk <i class="px-1 fab fa-linux"></i></Button>
+        </a>
+        <a
+          title="Download Untuk Mac M1"
+          href="https://github.com/oktoala/siauto-desktop/releases/download/v0.3.0/SIAutoDesktop-0.3.0.dmg"
+        >
+          <Button>
+            Download Untuk <i class="px-1 fab fa-apple"></i> M1
+          </Button>
+        </a>
+      </div>
+      {
+        /* {!navigator.userAgent.indexOf("Chrome") &&
+            <p class="text-bookmark-grey">
+              *Install Chromium-Based Browser
+            </p>
+          } */
+      }
+    </div>
+    <HeroImage src={ImageLaptop} />
+    <RoundedShape />
+  </div>
+</section>
